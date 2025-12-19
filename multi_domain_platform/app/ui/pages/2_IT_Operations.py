@@ -72,7 +72,7 @@ conn.close()
 
 tickets.columns = [c.strip() for c in tickets.columns]  # clean whitespace
 
-# Auto-detect common columns (works even if your CSV uses different headers)
+# Auto-detect common columns 
 status_col   = pick_column(tickets, ["status", "ticket_status", "state"])
 priority_col = pick_column(tickets, ["priority", "ticket_priority"])
 category_col = pick_column(tickets, ["category", "ticket_category", "type"])
@@ -228,7 +228,7 @@ if st.button("Analyze with AI", type="primary"):
 
     sample = filtered.head(max_rows).copy()
 
-    # Build a compact context table with useful columns (only those detected)
+    # build a compact context table with useful columns 
     keep_cols = [c for c in [
         ticketid_col, priority_col, status_col, category_col,
         subject_col, desc_col, created_col, resolved_col, assigned_col

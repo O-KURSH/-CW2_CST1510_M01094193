@@ -34,11 +34,11 @@ def run_comprehensive_tests():
     # Always ensure schema exists
     create_all_tables(conn)
 
-    # Migrate users (safe to run repeatedly because it uses INSERT OR IGNORE)
+    # Migrate users 
     migrate_users_from_file()
 
-    # Load CSVs (will append if you run multiple times)
-    # If your lab expects a "clean" run each time, delete the .db first.
+    # Load CSVs 
+    
     load_csv_to_table(conn, "DATA/cyber_incidents.csv", "cyber_incidents")
     load_csv_to_table(conn, "DATA/datasets_metadata.csv", "datasets_metadata")
     load_csv_to_table(conn, "DATA/it_tickets.csv", "it_tickets")

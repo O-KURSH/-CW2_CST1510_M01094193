@@ -68,7 +68,7 @@ def login_user(username, password):
     # 1. Handle case where no users exist yet
     if not os.path.exists(USER_DATA_FILE):
         print("Error: No users registered yet.")
-        return False  # No users registered → login fails
+        return False  # No users registered - login fails
 
     # 2. Search for the username in the file
     with open(USER_DATA_FILE, "r") as f:

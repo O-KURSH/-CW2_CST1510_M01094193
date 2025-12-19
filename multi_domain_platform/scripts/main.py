@@ -48,7 +48,7 @@ def run_comprehensive_tests():
     # ---------------------------------------------------------
     print("\n[TEST 1] Authentication")
 
-    # Use a unique username each run to avoid UNIQUE constraint issues
+    
     test_username = f"test_user_{int(time.time())}"
 
     success, msg = register_user(test_username, "TestPass123!", "user")

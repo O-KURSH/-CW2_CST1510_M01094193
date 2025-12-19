@@ -1,6 +1,5 @@
 from openai import OpenAI
 
-# Client automatically reads OPENAI_API_KEY from environment
 client = OpenAI()
 
 response = client.chat.completions.create(

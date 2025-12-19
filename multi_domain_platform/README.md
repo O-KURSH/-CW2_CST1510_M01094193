@@ -1,21 +1,20 @@
 # Project for module CST1510
 
-# Week 7: Secure Authentication System
-Student Name: Olt Kurshumlija 
-Student ID: M01094193
+# Multi-Domain Data Platform (Streamlit + SQLite + AI)
 
-Course: CST1510 -CW2 - Multi-Domain Intelligence Platform
-## Project Description
-A command-line authentication system implementing secure password hashing
-This system allows users to register accounts and log in with proper pass
-## Features
-- Secure password hashing using bcrypt with automatic salt generation
-- User registration with duplicate username prevention
-- User login with password verification
-- Input validation for usernames and passwords
-- File-based user data persistence
-## Technical Implementation
-- Hashing Algorithm: bcrypt with automatic salting
-- Data Storage: Plain text file (`users.txt`) with comma-separated values
-- Password Security: One-way hashing, no plaintext storage
-- Validation: Username (3-20 alphanumeric characters), Password (6-50 characters)
+A coursework project demonstrating a multi-domain data platform using:
+- **SQLite** database with multiple domains (IT tickets, cyber incidents, datasets)
+- **Authentication** with **bcrypt** password hashing
+- **Streamlit** multi-page UI (Dashboard + IT Operations)
+- **AI assistant** (OpenAI) for ticket triage / analysis
+
+## Project Structure (key folders)
+
+- `multi_domain_platform/app/data/`  
+  Database connection + schema + data access modules (SQLite).
+- `multi_domain_platform/app/services/`  
+  Business logic (e.g., authentication / user services).
+- `multi_domain_platform/app/ui/`  
+  Streamlit UI entrypoint (`Home.py`) and pages (`pages/`).
+- `DATA/`  
+  CSV input files used to populate the database (coursework datasets).

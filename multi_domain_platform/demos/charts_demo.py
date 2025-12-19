@@ -30,7 +30,7 @@ map_data = pd.DataFrame({
  "lon": -0.12 + np.random.randn(100) * 0.01,
 })
 st.map(map_data)
-#If you want more control, you can use libraries like Altair, Matplotlib, or Plotly:
+
 import altair as alt
 st.header("Altair example")
 chart = (

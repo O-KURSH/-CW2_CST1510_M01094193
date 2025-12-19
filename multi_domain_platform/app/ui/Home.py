@@ -1,11 +1,10 @@
+import streamlit as st
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]  # -> multi_domain_platform/
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
-
-import streamlit as st
 
 st.set_page_config(
     page_title="Login / Register",
@@ -15,7 +14,7 @@ st.set_page_config(
 
 # ---------- Initialise session state ----------
 if "users" not in st.session_state:
-    # Very simple in-memory "database": {username: password}
+    # Very simple in memory "database": {username: password}
     st.session_state.users = {}
 
 if "logged_in" not in st.session_state:

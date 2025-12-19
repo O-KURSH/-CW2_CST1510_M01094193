@@ -4,12 +4,8 @@ from openai import OpenAI
 # ----------------------------
 # API key handling
 # ----------------------------
-# Option 1 (recommended): environment variable OPENAI_API_KEY
+
 client = OpenAI()
-
-# Option 2 (if your lecturer insists on secrets.toml):
-# client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
-
 
 # ----------------------------
 # Page config
@@ -94,8 +90,6 @@ if "messages" not in st.session_state:
         {"role": "system", "content": SYSTEM_PROMPTS[domain]}
     ]
 
-# If user changes domain, update system prompt (but keep chat clean)
-# Easiest: reset chat when domain changes
 if "last_domain" not in st.session_state:
     st.session_state.last_domain = domain
 

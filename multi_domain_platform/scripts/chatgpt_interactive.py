@@ -1,7 +1,7 @@
 from openai import OpenAI
 
 # Initialise client
-# IMPORTANT: API key is read from the OPENAI_API_KEY environment variable
+
 client = OpenAI()
 
 # Initialise conversation history

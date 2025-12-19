@@ -1,0 +1,38 @@
+# -----------------------------
+# Python
+# -----------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# -----------------------------
+# OS / Editor
+# -----------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# -----------------------------
+# Streamlit
+# -----------------------------
+.streamlit/secrets.toml
+
+# -----------------------------
+# Secrets / env files
+# -----------------------------
+.env
+
+# -----------------------------
+# SQLite temp files
+# (DO NOT ignore the main .db unless told to)
+# -----------------------------
+*.db-journal
+*.db-wal
+*.db-shm
